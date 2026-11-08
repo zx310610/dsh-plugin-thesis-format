@@ -1,5 +1,5 @@
 # dsh 加载本 bundle 时应用的补丁层：把插件插入到配置树中。
-# 可在 Plugins 页面或 profile 的 cordis.patch.yml 中覆盖 config。
+# 可在 profile 的 cordis.patch.yml 中按 id 覆盖 config，写法见 README“配置”一节。
 - insert:
     - id: thesis-format-check
       name: 'dsh-plugin-thesis-format'
