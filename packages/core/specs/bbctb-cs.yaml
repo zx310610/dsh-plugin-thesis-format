@@ -1,0 +1,144 @@
+# 蚌埠工商学院 计算机科学与技术专业 毕业设计（论文）格式规范
+#
+# 依据：2025届、2026届《计算机科学与技术专业毕业设计模板》。
+# 两届模板的格式说明文字与样式表经比对完全一致（仅示例班级、学号、年份不同），
+# 因此共用这一份规范。若以后某届有变化，复制本文件改动差异项即可。
+#
+# 字号可写 "小四" / "五号" 或磅值数字；字体名可写中文或英文别名（宋体 = SimSun）。
+# 有歧义、需要确认的条目见 docs/规范歧义.md，对应位置标注了【待确认】。
+
+id: bbctb-cs
+name: 蚌埠工商学院 计算机科学与技术专业 毕业设计（论文）
+appliesTo: [2025, 2026]
+sources:
+  - 2025届计算机科学与技术专业毕业设计模板.doc
+  - 2026届计算机科学与技术专业毕业设计模板.doc
+
+# 不需要的规则可在此关闭，如 [text-hygiene]
+disabledRules: []
+
+# “全文：A4页面”；“页面按上边距2.5cm、下边距2.5cm、左边距3.5cm、右边距2.5cm”；“装订线为0”
+page:
+  width: 21
+  height: 29.7
+  margins: { top: 2.5, bottom: 2.5, left: 3.5, right: 2.5, gutter: 0 }
+  toleranceCm: 0.05
+
+front:
+  # “中文标题：黑体，小二号，居中，段前空1行”
+  titleZh: { font: 黑体, size: 小二, align: center }
+  # “严格按照此处的署名格式，小4号宋体居中，各部分之间空一格”
+  author: { font: 宋体, size: 小四, align: center }
+  # “指导教师姓名和职称，小四号宋体居中”
+  advisor: { font: 宋体, size: 小四, align: center }
+
+abstractZh:
+  # “摘要两字的中间空两格”；“前面空两个字符后加冒号（：）”
+  labelPattern: '^摘(  |　)要：'
+  # “宋体，小四号字，加粗”（指“摘  要：”“关键词：”标签）
+  labelBold: true
+  # “摘要内容用宋体小四号字，行间距20磅”
+  text: { font: 宋体, size: 小四, bold: false, lineSpacing: { exactPt: 20 } }
+  # “中文摘要约300-500个汉字”
+  minChars: 300
+  maxChars: 500
+
+keywordsZh:
+  labelPattern: '^关键词：'
+  # “3-5个关键词，宋体小四号，中间用分号“；”隔开，最后一个关键词不加标点符号”
+  separator: '；'
+  min: 3
+  max: 5
+  text: { font: 宋体, size: 小四, bold: false }
+
+# “英文标题：字体Times New Roman，14号”
+# 【待确认】“加粗，字号、字体均不变”是否要求英文标题加粗，暂不检查加粗
+titleEn: { westernFont: Times New Roman, size: 14 }
+
+abstractEn:
+  labelPattern: '^Abstract:'
+  # “首行缩进2.5个字符，字体都为Times New Roman，五号，1.5倍行距，两端对齐。关键词与摘要对齐”
+  text:
+    westernFont: Times New Roman
+    size: 五号
+    lineSpacing: { multiple: 1.5 }
+    align: justify
+    firstLineIndentChars: 2.5
+
+keywordsEn:
+  labelPattern: '^Keywords:'
+  # “关键词的首字母不用大写，关键词之间用分号间隔（英文输入法状态下）”
+  separator: ';'
+  lowercase: true
+  # 专有名词与缩写保留大小写。常见技术名词（Spring Boot、MySQL、WeChat…）已内置于 rules/english.ts，
+  # 含两个以上大写字母、数字或 . / # + 的词（JavaScript、Vue3、Node.js、B/S）也自动视为专有名词。
+  # 遇到内置列表没有的专有名词，加在这里即可，如 [Ollama, Gitee]
+  # 经确认按技术专名处理（2026-11-08）
+  properNouns: [Web, Serverless, Cloud Function]
+
+toc:
+  # “宋体字，小四号，1.5倍行距”；“一级目录序号后用顿号，顶格且加粗”
+  entry: { font: 宋体, size: 小四, lineSpacing: { multiple: 1.5 } }
+  # “目录只需列到2级”
+  maxLevel: 2
+  # “参考文献的标题一定要列入目录”
+  # 【待确认】说明中还提到“中文摘要”“结束语”应列入目录，但模板示例目录中没有，暂不强制
+  mustInclude: [参考文献, 致谢]
+  # “目录内容要求自动生成”
+  requireAuto: true
+
+regionTitles:
+  # “宋体字，小三号，加粗，两字中间空两格，以美观，段前段后各空一行”
+  toc: { text: '目  录', font: 宋体, size: 小三, bold: true, align: center, spaceBeforeLines: 1, spaceAfterLines: 1 }
+  # “致谢”字样用小三号宋体字，加粗，居中，两个字之间可空二格，并留出上下间距为段前1行，段后1行”
+  acknowledgement: { text: '致  谢', font: 宋体, size: 小三, bold: true, align: center, spaceBeforeLines: 1, spaceAfterLines: 1 }
+  # “小四号黑体，空两个字符”
+  references: { text: '参考文献', font: 黑体, size: 小四, firstLineIndentChars: 2 }
+  # ““附录” 二字用三号黑体居中打印，两字中间空一格”
+  appendix: { text: '附 录', font: 黑体, size: 三号, align: center }
+
+headings:
+  # “一级标题，小四，宋体，加粗，后面用顿号”；“各级标题段前段后均0行”；“所有标题全部靠左，前面空2格”
+  level1: { font: 宋体, size: 小四, bold: true, firstLineIndentChars: 2, spaceBeforeLines: 0, spaceAfterLines: 0 }
+  # “二级标题用圆括号，中间用汉字数字。小4宋体，不加粗，单独一行”
+  level2: { font: 宋体, size: 小四, bold: false, firstLineIndentChars: 2, spaceBeforeLines: 0, spaceAfterLines: 0 }
+  # “三级标题序号后用圆点号，宋体”；“只有标题处的数字为宋体”，所以标题不检查西文字体
+  level3: { font: 宋体, size: 小四, bold: false, firstLineIndentChars: 2, spaceBeforeLines: 0, spaceAfterLines: 0 }
+  # “四级标题的序号，用圆括弧”；“四级标题后可以加句号，接着写内容”
+  level4: { font: 宋体, size: 小四, bold: false, firstLineIndentChars: 2 }
+
+# “正文行间距为1.5倍行距，小四，宋体，但其中数字、英文单词用Times New Roman”
+# “正文所有重起一段的地方，都空2个字符”；“正文不少于8000字”
+body:
+  font: 宋体
+  westernFont: Times New Roman
+  size: 小四
+  lineSpacing: { multiple: 1.5 }
+  firstLineIndentChars: 2
+  minChars: 8000
+
+acknowledgement:
+  # “谢辞正文用小4号宋体，1.5倍行距”
+  text: { font: 宋体, size: 小四, lineSpacing: { multiple: 1.5 } }
+
+captions:
+  # “表的名称在表的正上方，表序号与表标题中间空一格，居中，黑体，五号，不加粗”
+  table: { font: 黑体, size: 五号, bold: false, align: center }
+  # “图的名称在图的正下方，图序号与图标题中间空一格，居中，五号黑体”
+  figure: { font: 黑体, size: 五号, bold: false, align: center }
+  # “表格内容的“资料来源：”在表的下方，靠左，前面空两格，5号字体”
+  sourceNote: { size: 五号, firstLineIndentChars: 2 }
+  # “正文中与相关表格/图示所对应的文字处须注明“（见表n）”/“（见图n）””
+  requireTextReference: true
+
+references:
+  # “参考文献个数不少于15个”；“英文文献不少于 3 篇”
+  minCount: 15
+  minEnglish: 3
+  # “序号用方括号，前空两格，全部五号宋体”
+  entry: { font: 宋体, size: 五号, firstLineIndentChars: 2 }
+  # “每条参考文献结尾后以点号“.”结束”
+  # 【待确认】文末“参考文献格式示例”中的例子却以“。”结尾
+  endWith: ['.']
+  # “类别按J（期刊）、M（书籍）、D（硕博士论文）、N（报纸）、OL（网页）”，另有 EB/OL、DB/OL
+  typeMarkers: [J, M, D, N, C, P, R, S, Z, EB/OL, DB/OL, OL]

@@ -1,0 +1,8 @@
+# dsh 加载本 bundle 时应用的补丁层：把插件插入到配置树中。
+# 可在 Plugins 页面或 profile 的 cordis.patch.yml 中覆盖 config。
+- insert:
+    - id: thesis-format-check
+      name: 'dsh-plugin-thesis-format'
+      config:
+        # 默认格式规范：内置 id 或 YAML 文件的绝对路径
+        spec: bbctb-cs

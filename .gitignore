@@ -1,0 +1,16 @@
+node_modules/
+lib/
+*.tsbuildinfo
+# 论文与模板原件含个人信息，不入库
+*.doc
+*.docx
+samples/
+reports/
+
+# 构建产物
+dist/
+packages/dsh-plugin/specs/
+packages/dsh-plugin/THIRD_PARTY_LICENSES.txt
+
+# 期刊投稿资料，不公开
+投稿要求/

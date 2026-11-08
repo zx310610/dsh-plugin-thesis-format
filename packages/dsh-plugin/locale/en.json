@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Thesis Format Checker",
+    "description": "Checks Chinese undergraduate thesis .docx/.doc files against a school's formatting rules (fonts, spacing, margins, headings, captions, references)."
+  }
+}

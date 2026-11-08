@@ -1,0 +1,13 @@
+{
+  "name": "thesis-format-checker",
+  "private": true,
+  "type": "module",
+  "description": "毕业论文格式自动检查：核心库 + CLI + DeepSeek Harness 插件",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "check": "pnpm --filter @thesis-format/core exec tsx src/cli.ts"
+  },
+  "engines": { "node": ">=24.9" }
+}

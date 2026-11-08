@@ -1,0 +1,66 @@
+{
+  "name": "dsh-plugin-thesis-format",
+  "version": "0.1.0",
+  "description": "毕业论文（.docx/.doc）格式自动检查：字体字号、行距缩进、页边距、标题编号、图表题注、参考文献等",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "thesis",
+    "docx"
+  ],
+  "license": "MIT",
+  "author": "周翔",
+  "homepage": "https://github.com/zx310610/dsh-plugin-thesis-format/tree/main/packages/dsh-plugin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zx310610/dsh-plugin-thesis-format.git",
+    "directory": "packages/dsh-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/zx310610/dsh-plugin-thesis-format/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "specs",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_LICENSES.txt"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=24",
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "pack:local": "pnpm build && pnpm pack --pack-destination ../../dist"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.1.0",
+    "@thesis-format/core": "workspace:*",
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.28.2",
+    "typescript": "5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

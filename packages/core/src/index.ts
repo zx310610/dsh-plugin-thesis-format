@@ -1,0 +1,8 @@
+export { checkThesis, checkDocument, openThesis, regionText, type CheckOptions, type CheckResult } from './check.js'
+export { formatReport, groupIssues, summarize, type ReportFormat } from './report.js'
+export { loadSpec, BUILTIN_SPECS, DEFAULT_SPEC, type Spec, type FormatSpec } from './spec.js'
+export { loadDocx, type DocModel, type Paragraph, type Region, type ParagraphKind } from './docx/document.js'
+export { analyzeStructure } from './structure.js'
+export { ensureDocx } from './convert.js'
+export { ALL_RULES, type Issue, type Rule, type RuleContext, type Severity } from './rules/index.js'
+export { checkFormat } from './rules/format.js'
