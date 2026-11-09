@@ -9,7 +9,11 @@
     "docx"
   ],
   "license": "MIT",
-  "author": "周翔",
+  "author": {
+    "name": "周翔",
+    "email": "120230021@bctb.edu.cn",
+    "url": "https://github.com/zx310610"
+  },
   "homepage": "https://github.com/zx310610/dsh-plugin-thesis-format/tree/main/packages/dsh-plugin#readme",
   "repository": {
     "type": "git",

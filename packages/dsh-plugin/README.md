@@ -90,6 +90,13 @@
     spec: D:/规范/my-school.yaml
 ```
 
+## 作者
+
+周翔，蚌埠工商学院计算机与人工智能学院
+
+- 邮箱：120230021@bctb.edu.cn
+- GitHub：[zx310610](https://github.com/zx310610)
+
 ## 许可
 
 MIT。插件打包了 jszip、fast-xml-parser、yaml 等开源库（jszip 按其 MIT 许可使用），它们的版权与许可声明见包内的 `THIRD_PARTY_LICENSES.txt`。

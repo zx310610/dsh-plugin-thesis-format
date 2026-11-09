@@ -123,3 +123,10 @@ pnpm --filter dsh-plugin-thesis-format pack:local   # 生成 dist/dsh-plugin-the
 - 不依赖 `@deepseek-ai/dsh-tools`：插件按原始 `ToolDefinition` 结构注册，运行时由 dsh 提供工具注册表。
 - 工具在 dsh 进程内运行，可读取 dsh 进程有权限访问的任意文件路径；`.doc` 转换会调用本机 Word 或 LibreOffice。
 - 发布到 npm 后，按 dsh 的约定给仓库加上 `dsh-plugin` topic 便于他人发现。
+
+## 作者
+
+周翔，蚌埠工商学院计算机与人工智能学院
+
+- 邮箱：120230021@bctb.edu.cn
+- GitHub：[zx310610](https://github.com/zx310610)
